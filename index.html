@@ -14,11 +14,11 @@
         <div class="pane-group">
           <div class="pane pane-sm sidebar">
             <nav class="nav-group">
-              <span class="nav-group-item" id="nav-home" id="nav-home">
+              <span class="nav-group-item active" id="nav-home" id="nav-home">
                 <span class="icon icon-home"></span>
                 Home
               </span>
-              <span class="nav-group-item active" id="nav-store">
+              <span class="nav-group-item" id="nav-store">
                 <span class="icon icon-light-up"></span>
                 Store
               </span>
@@ -29,12 +29,19 @@
             </nav>
           </div>
 
-          <div class="pane" id="pane-home" style="display:none">
-	  	<h1>Home</h1>
-		<button id="button-midi-start">Read Midi</button>
+          <div class="pane" id="pane-home">
+	  <select>
+	  	<option>Select Mode</option>
+	  	<option>Simple</option>
+	  	<option>Learner</option>
+	  	<option>Expert</option>
+	  	<option>Record</option>
+	  </select>
+           <button id="button-midi-start">Start</button>
+	   <button id="button-midi-stop">Stop</button>
           </div>
 
-          <div class="pane" id="pane-store">
+          <div class="pane" id="pane-store" style="display:none">
             <table class="table-striped">
               <thead>
                 <tr>

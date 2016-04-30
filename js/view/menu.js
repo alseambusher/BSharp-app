@@ -18,3 +18,7 @@ document.getElementById("button-midi-start").addEventListener('click', function(
 	ipcRenderer.send('midi-start-record');
 });
 
+document.getElementById("button-midi-stop").addEventListener('click', function(event){
+	ipcRenderer.send('midi-stop-record');
+});
+

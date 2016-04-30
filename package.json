@@ -11,6 +11,8 @@
     "electron-prebuilt": "latest",
     "electron-debug": "latest", 
     "midi" : "latest",
-    "remote": "latest"
+    "remote": "latest",
+    "johnny-five":"latest",
+    "node-pixel": "latest"
   }
 }

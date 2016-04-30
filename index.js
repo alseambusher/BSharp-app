@@ -25,6 +25,6 @@ app.on('ready', () => {
 
 	mainWindow.loadURL(`file://${__dirname}/index.html`);
 	mainWindow.on('closed', onClosed);
-	mainWindow.openDevTools();
+	//mainWindow.openDevTools();
 	home.init();
 });
