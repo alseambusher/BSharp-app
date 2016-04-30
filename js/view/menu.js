@@ -15,7 +15,8 @@ navs.forEach(function (e){
 });
 
 document.getElementById("button-midi-start").addEventListener('click', function(event){
-	ipcRenderer.send('midi-start-record');
+	mode = document.getElementById("record-mode").value;
+	ipcRenderer.send('midi-start-record-'+mode);
 });
 
 document.getElementById("button-midi-stop").addEventListener('click', function(event){

@@ -19,12 +19,12 @@ app.on('window-all-closed', app.quit);
 
 app.on('ready', () => {
 	const mainWindow = new electron.BrowserWindow({
-		width: 600,
-		height: 400
+		width: 800,
+		height: 500
 	});
 
 	mainWindow.loadURL(`file://${__dirname}/index.html`);
 	mainWindow.on('closed', onClosed);
-	//mainWindow.openDevTools();
+	mainWindow.openDevTools();
 	home.init();
 });
