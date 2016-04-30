@@ -8,7 +8,9 @@
     "start": "electron ."
   },
   "dependencies": {
-    "electron-debug": "^0.6.0", 
-    "midi" : "latest"
+    "electron-prebuilt": "latest",
+    "electron-debug": "latest", 
+    "midi" : "latest",
+    "remote": "latest"
   }
 }

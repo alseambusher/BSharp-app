@@ -1,7 +1,7 @@
 var midi = require('midi');
 
 // Set up a new input.
-exports.input = new midi.input();
+input = new midi.input();
 
 // Count the available input ports.
 input.getPortCount();

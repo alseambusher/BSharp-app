@@ -6,8 +6,6 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" href="photon/css/photon.min.css">
 
-    <!-- Javascript -->
-    <script src="js/menu.js" charset="utf-8"></script>
   </head>
   <body>
     <div class="window">
@@ -16,22 +14,27 @@
         <div class="pane-group">
           <div class="pane pane-sm sidebar">
             <nav class="nav-group">
-              <span class="nav-group-item">
+              <span class="nav-group-item" id="nav-home" id="nav-home">
                 <span class="icon icon-home"></span>
                 Home
               </span>
-              <span class="nav-group-item active">
+              <span class="nav-group-item active" id="nav-store">
                 <span class="icon icon-light-up"></span>
                 Store
               </span>
-              <span class="nav-group-item">
+              <span class="nav-group-item" id="nav-tools">
                 <span class="icon icon-tools"></span>
                	Tools 
               </span>
             </nav>
           </div>
 
-          <div class="pane">
+          <div class="pane" id="pane-home" style="display:none">
+	  	<h1>Home</h1>
+		<button id="button-midi-start">Read Midi</button>
+          </div>
+
+          <div class="pane" id="pane-store">
             <table class="table-striped">
               <thead>
                 <tr>
@@ -57,8 +60,13 @@
                </tbody>
             </table>
           </div>
+
+          <div class="pane" id="pane-tools" style="display:none">
+	  	<h1>Tools</h1>
+          </div>
         </div>
       </div>
     </div>
   </body>
+  <script src="js/view/menu.js" charset="utf-8"></script>
 </html>

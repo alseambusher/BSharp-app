@@ -1,7 +1,7 @@
 'use strict';
 const electron = require('electron');
 const app = electron.app;
-
+var home = require("./js/home.js");
 //var reader = require('midi-reader');
 
 // adds debug features like hotkeys for triggering dev tools and reload
@@ -15,26 +15,16 @@ function onClosed() {
 	mainWindow = null;
 }
 
-function createMainWindow() {
-	const win = new electron.BrowserWindow({
+app.on('window-all-closed', app.quit);
+
+app.on('ready', () => {
+	const mainWindow = new electron.BrowserWindow({
 		width: 600,
 		height: 400
 	});
 
-	win.loadURL(`file://${__dirname}/index.html`);
-	win.on('closed', onClosed);
-
-	return win;
-}
-
-app.on('window-all-closed', app.quit);
-
-app.on('activate', () => {
-	if (!mainWindow) {
-		mainWindow = createMainWindow();
-	}
-});
-
-app.on('ready', () => {
-	mainWindow = createMainWindow();
+	mainWindow.loadURL(`file://${__dirname}/index.html`);
+	mainWindow.on('closed', onClosed);
+	mainWindow.openDevTools();
+	home.init();
 });
