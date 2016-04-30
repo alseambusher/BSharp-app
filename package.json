@@ -25,7 +25,8 @@
     "electron"
   ],
   "dependencies": {
-    "electron-debug": "^0.6.0"
+    "electron-debug": "^0.6.0",
+		"midi": "latest"
   },
   "devDependencies": {
     "electron-packager": "^7.0.0",
