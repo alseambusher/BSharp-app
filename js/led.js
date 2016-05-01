@@ -40,7 +40,7 @@ function getData( TimeKeyState, i ){
 board.on("ready", function() {
     exports.strip = new pixel.Strip({
         data: 6,
-        length: 19, // number of pixels in the exports.strip.
+        length: 76, // number of pixels in the exports.strip.
         color_order: pixel.COLOR_ORDER.GRB,
         board: this,
         controller: "FIRMATA"
@@ -70,6 +70,6 @@ board.on("ready", function() {
             }
 	 counter +=1;
          exports.strip.show();
-	 }, 1000/20);
+	 }, 1000/50);
     });
 });
