@@ -13,6 +13,8 @@
     "midi" : "latest",
     "remote": "latest",
     "johnny-five":"latest",
-    "node-pixel": "latest"
+    "node-pixel": "latest",
+    "nedb": "latest",
+    "xmlhttprequest": "latest"
   }
 }

@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>B#</title>
+    <title>B# - Learn Music, Share Music</title>
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="photon/css/photon.min.css">
+    <script>window.$ = window.jQuery = require('./js/jquery.min.js');</script>
 
   </head>
   <body>
@@ -13,18 +14,15 @@
       <div class="window-content">
         <div class="pane-group">
           <div class="pane pane-sm sidebar">
+	  <img src="icon.png" />
             <nav class="nav-group">
               <span class="nav-group-item active" id="nav-home" id="nav-home">
                 <span class="icon icon-home"></span>
                 Home
               </span>
-              <span class="nav-group-item" id="nav-store">
-                <span class="icon icon-light-up"></span>
-                Store
-              </span>
               <span class="nav-group-item" id="nav-tools">
                 <span class="icon icon-tools"></span>
-               	Tools 
+               Recommendations	
               </span>
             </nav>
           </div>
@@ -38,37 +36,33 @@
 	  </select>
            <button id="button-midi-start">Start</button>
 	   <button id="button-midi-stop">Stop</button>
-          </div>
-
-          <div class="pane" id="pane-store" style="display:none">
+	   <button id="button-midi-clear">Clear</button>
+	  <select id="record-mode-speed">
+	  	<option value="1.0">1.0x</option>
+	  	<option value="1.5">1.5x</option>
+	  	<option value="2.0">2.0x</option>
+	  	<option value="0.5">0.5x</option>
+	  	<option value="0.2">0.2x</option>
+	  	<option value="0.1">0.1x</option>
+	  </select>
             <table class="table-striped">
               <thead>
                 <tr>
-                  <th>Name</th>
-                  <th>Kind</th>
-                  <th>Date Modified</th>
-                  <th>Author</th>
+                  <th>Timestamp</th>
+                  <th>Length</th>
                 </tr>
               </thead>
-              <tbody>
-                <tr>
-                  <td>Happy Birthday</td>
-                  <td>Basic</td>
-                  <td>Oct 13, 2015</td>
-                  <td>ambusher</td>
-                </tr>
-                <tr>
-                  <td>Beethovan</td>
-                  <td>Advanced</td>
-                  <td>Oct 13, 2015</td>
-                  <td>ambusher</td>
-                </tr>
+              <tbody id="store">
                </tbody>
             </table>
+
+          </div>
+
+          <div class="pane" id="pane-store" style="display:none">
           </div>
 
           <div class="pane" id="pane-tools" style="display:none">
-	  	<h1>Tools</h1>
+	  	<h1>Recommended</h1>
           </div>
         </div>
       </div>
