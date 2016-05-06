@@ -20,7 +20,7 @@
                 <span class="icon icon-home"></span>
                 Home
               </span>
-              <span class="nav-group-item" id="nav-tools">
+              <span class="nav-group-item" id="nav-recommend">
                 <span class="icon icon-tools"></span>
                Recommendations	
               </span>
@@ -37,6 +37,7 @@
            <button id="button-midi-start">Start</button>
 	   <button id="button-midi-stop">Stop</button>
 	   <button id="button-midi-clear">Clear</button>
+	   <button id="button-midi-refresh">Refresh</button>
 	  <select id="record-mode-speed">
 	  	<option value="1.0">1.0x</option>
 	  	<option value="1.5">1.5x</option>
@@ -58,11 +59,17 @@
 
           </div>
 
-          <div class="pane" id="pane-store" style="display:none">
-          </div>
-
-          <div class="pane" id="pane-tools" style="display:none">
-	  	<h1>Recommended</h1>
+          <div class="pane" id="pane-recommend" style="display:none">
+            <table class="table-striped">
+	  	<thead>
+                <tr>
+                  <th>Timestamp</th>
+                  <th>Length</th>
+                </tr>
+              </thead>
+              <tbody id="store-recommend">
+               </tbody>
+	     </table>
           </div>
         </div>
       </div>
